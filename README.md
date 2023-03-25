@@ -1,5 +1,7 @@
 # liblzss
 
+![PyPI](https://img.shields.io/pypi/v/lzsslib)
+
 Liblzss is an small library for inflating and deflating LZSS (Lempel, Ziv,
 Storer, Szymanski) buffers.
 
