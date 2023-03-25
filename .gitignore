@@ -10,4 +10,5 @@ venv/
 
 # Unit test / coverage reports
 .coverage
+.coverage.*
 htmlcov/
