@@ -1,9 +1,6 @@
 #!/usr/bin/env python
 
 
-from typing import Self
-
-
 class _WindowedBuffer(bytearray):
     def __init__(self, window_size, **kwargs) -> None:
         self._window_size = window_size
@@ -18,7 +15,7 @@ class _WindowedBuffer(bytearray):
         super().append(i)
         self._check_len()
 
-    def __iadd__(self, i) -> Self:
+    def __iadd__(self, i):
         super().__iadd__(i)
         self._check_len()
         return self
