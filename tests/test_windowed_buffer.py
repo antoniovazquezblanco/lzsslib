@@ -33,18 +33,18 @@ class TestWindowedBuffer(unittest.TestCase):
 
     def test_iadd(self):
         for i in range(0, 50):
-            self.buf += int.to_bytes(i, 1)
+            self.buf += int.to_bytes(i, 1, 'big')
         self.assertEqual(len(self.buf), 50, 'incorrect length')
         self.assertEqual(self.buf[0], 0, 'incorrect first element')
         self.assertEqual(self.buf[49], 49, 'incorrect last element')
         for i in range(50, 100):
-            self.buf += int.to_bytes(i, 1)
+            self.buf += int.to_bytes(i, 1, 'big')
         self.assertEqual(len(self.buf), 100, 'incorrect length')
         self.assertEqual(self.buf[0], 0, 'incorrect first element')
         self.assertEqual(self.buf[49], 49, 'incorrect intermediate element')
         self.assertEqual(self.buf[99], 99, 'incorrect last element')
         for i in range(100, 150):
-            self.buf += int.to_bytes(i, 1)
+            self.buf += int.to_bytes(i, 1, 'big')
         self.assertEqual(len(self.buf), 100, 'incorrect length')
         self.assertEqual(self.buf[0], 50, 'incorrect first element')
         self.assertEqual(self.buf[99], 149, 'incorrect last element')
