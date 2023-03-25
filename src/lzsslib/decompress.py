@@ -1,11 +1,9 @@
 #!/usr/bin/env python
 
-'''
-J.A. Storer and T.G. Szymanski. Data Compression via Textual Substitution. Journal of the ACM, 29(4):928-951, 1982.
-'''
-
-from .windowed_buffer import WindowedBuffer
 from bitstring import BitStream
+
+from .windowed_buffer import _WindowedBuffer
+
 
 class LzssDecompressor:
     def __init__(self, offset_width=12, size_width=5, size_min=3) -> None:
@@ -13,7 +11,7 @@ class LzssDecompressor:
         self._size_width = size_width
         self._ref_width = offset_width + size_width + 1
         self._size_min = size_min
-        self._window_buf = WindowedBuffer(window_size=(1 << offset_width))
+        self._window_buf = _WindowedBuffer(window_size=(1 << offset_width))
         self._bitstream = BitStream()
 
     def decompress(self, data, max_out_len=-1):
