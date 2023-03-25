@@ -1,5 +1,6 @@
 # liblzss
 
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/antoniovazquezblanco/lzsslib/test.yml)
 ![PyPI](https://img.shields.io/pypi/v/lzsslib)
 
 Liblzss is an small library for inflating and deflating LZSS (Lempel, Ziv,
