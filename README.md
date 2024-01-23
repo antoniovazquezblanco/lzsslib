@@ -22,6 +22,8 @@ $ pip install -U lzsslib
 
 ## Usage
 
+The following example shows how to decompress a file using default options.
+
 ```python
 from pathlib import Path
 from lzsslib.decompress import LzssDecompressor
