@@ -20,6 +20,30 @@ $ pip install -U lzsslib
 ```
 
 
+## Usage
+
+```python
+from pathlib import Path
+from lzsslib.decompress import LzssDecompressor
+
+# Create a decompressor object with default options
+decomp = LzssDecompressor()
+
+# Open an input and output files
+fin = Path('input.lzss').open(mode='rb')
+fout = Path('output.bin').open(mode='wb')
+
+# Read the input, decompress and write
+while (buffer := fin.read(1024)):
+    out = decomp.decompress(buffer, remaining_size)
+    fout.write(out)
+
+# Ensure output is written and close
+fout.flush()
+fin.close()
+fout.close()
+```
+
 ## Links
 
 -   PyPI Releases: https://pypi.org/project/lzsslib/
