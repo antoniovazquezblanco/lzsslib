@@ -1,3 +1,7 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
 [project]
 name = "lzsslib"
 description = "A library for inflating and deflating LZSS (Lempel, Ziv, Storer, Szymanski) buffers."
@@ -22,12 +26,11 @@ dynamic = ["version"]
 "Source Code" = "https://github.com/antoniovazquezblanco/lzsslib/"
 "Issue Tracker" = "https://github.com/antoniovazquezblanco/lzsslib/issues"
 
-[build-system]
-requires = ["setuptools"]
-build-backend = "setuptools.build_meta"
+[tool.hatch.build.targets.wheel]
+packages = ["src/jzp"]
 
-[tool.setuptools.dynamic]
-version = {attr = "lzsslib.__version__"}
+[tool.hatch.version]
+source = "vcs"
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
