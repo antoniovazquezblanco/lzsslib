@@ -1,15 +1,13 @@
-# liblzss
+# lzsslib
 
-![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/antoniovazquezblanco/lzsslib/test.yml)
-![PyPI](https://img.shields.io/pypi/v/lzsslib)
+[![Build](https://github.com/antoniovazquezblanco/lzsslib/actions/workflows/build.yml/badge.svg)](https://github.com/antoniovazquezblanco/lzsslib/actions/workflows/build.yml)
+[![PyPI](https://img.shields.io/pypi/v/lzsslib)](https://pypi.org/project/lzsslib/)
+[![Snyk](https://snyk.io/advisor/python/lzsslib/badge.svg)](https://snyk.io/advisor/python/lzsslib)
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](LICENSE.md)
 
-Liblzss is an small library for inflating and deflating LZSS (Lempel, Ziv,
-Storer, Szymanski) buffers.
+Lzsslib is an small library for inflating and deflating LZSS (Lempel, Ziv, Storer, Szymanski) buffers.
 
-The LZSS format is originally described in a paper titled ["Data Compression via
-Textual Substitution" published in Journal of the ACM, 29(4):928-951, 1982 by
-J.A. Storer and T.G. Szymanski.](https://doi.org/10.1145/322344.322346)
-
+The LZSS format is originally described in a paper titled ["Data Compression via Textual Substitution" published in Journal of the ACM, 29(4):928-951, 1982 by J.A. Storer and T.G. Szymanski.](https://doi.org/10.1145/322344.322346)
 
 ## Installing
 
@@ -18,7 +16,6 @@ Install and update using `pip`:
 ```bash
 $ pip install -U lzsslib
 ```
-
 
 ## Usage
 
@@ -48,6 +45,6 @@ fout.close()
 
 ## Links
 
--   PyPI Releases: https://pypi.org/project/lzsslib/
--   Source Code: https://github.com/antoniovazquezblanco/lzsslib
--   Issue Tracker: https://github.com/antoniovazquezblanco/lzsslib/issues
+- PyPI Releases: https://pypi.org/project/lzsslib/
+- Source Code: https://github.com/antoniovazquezblanco/lzsslib
+- Issue Tracker: https://github.com/antoniovazquezblanco/lzsslib/issues
