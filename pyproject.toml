@@ -27,7 +27,7 @@ dynamic = ["version"]
 "Issue Tracker" = "https://github.com/antoniovazquezblanco/lzsslib/issues"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/jzp"]
+packages = ["src/lzsslib"]
 
 [tool.hatch.version]
 source = "vcs"

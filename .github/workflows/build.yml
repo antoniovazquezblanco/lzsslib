@@ -28,7 +28,9 @@ jobs:
       run: hatch build
 
     - name: Test
-      run: python -m unittest discover
+      run: |
+        pip install -e .
+        python -m unittest discover
 
     - name: Upload artifacts
       uses: actions/upload-artifact@v4
